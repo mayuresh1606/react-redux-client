@@ -13,7 +13,13 @@ const initialState : LoginFormState = {
 const loginSlice = createSlice({
     name: "loginForm",
     initialState: initialState,
-    reducers: {}
+    reducers: {
+        clearForm: (state) => {
+            state.email = "";
+            state.password = ""
+        }
+    }
 })
 
+export const { clearForm } = loginSlice.actions;
 export default loginSlice.reducer
