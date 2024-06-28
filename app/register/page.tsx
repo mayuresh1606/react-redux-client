@@ -5,6 +5,7 @@ import React from "react"
 import { useDispatch, useSelector } from "react-redux";
 import { loginValidation } from "@/validation/login"
 import { useFormik } from "formik";
+import axios from "axios";
 
 type InitialValues = {
     emailId: string,
@@ -22,7 +23,8 @@ export default function New(){
     }
 
     const handleSubmit = async ( values: InitialValues ) => {
-        console.log(values, "FORM VALUES");
+        console.log(values);
+        
     }
 
     const formik = useFormik({
